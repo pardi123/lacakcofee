@@ -19,19 +19,27 @@ class M_cafe extends CI_Model
 		$pass = $data['pass'];
 		$filename = md5(rand(00000,99999)).".jpg";
 		$cover = $data['cover'];
-		if (move_uploaded_file($cover,"./photo-toko/$filename"))
+		$check = crud_selwhere("cafe",NULL,"kode = '$kode'");
+		if ($check['count'] > 0){
+			return 2;
+		}
+		else
 		{
-
-			$insert = crud_insert("cafe","'','$kode','$nama','$provinsi','$kota','$alamat','$admin','$filename'");
-			if ($insert)
+			if (move_uploaded_file($cover,"./photo-toko/$filename"))
 			{
-				$user = crud_insert("user","'','$nama','$kode','$pass','','','$cover','store','',''");
-				if ($user == 1)
+
+				$insert = crud_insert("cafe","'','$kode','$nama','$provinsi','$kota','$alamat','$admin','$filename'");
+				if ($insert)
 				{
-					return 1;
+					$user = crud_insert("user","'','$nama','$kode','$pass','','','$cover','store','',''");
+					if ($user == 1)
+					{
+						return 1;
+					}
 				}
 			}
 		}
+
 	}
 	function dataCafe($data)
 	{
@@ -144,7 +152,7 @@ class M_cafe extends CI_Model
 		}
 		else
 		{
-			$user = crud_selwhere("user",NULL,"(level = 'user') AND(nama LIKE '%$key%' OR username LIKE '$key')");
+			$user = crud_selwhere("user",NULL,"(level = 'user') AND (nama LIKE '%$key%' OR username LIKE '$key')");
 		}
 		return $user;
 	}

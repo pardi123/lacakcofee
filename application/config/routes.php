@@ -67,6 +67,8 @@ $route['kelola-provinsi'] = "admin/AdminPage/kelolaprovinsi";
 $route['kelola-kota'] = "admin/AdminPage/kelolaKota";
 $route['kelola-store'] = "admin/AdminPage/addStore";
 $route['kelola-user'] = "admin/AdminPage/kelolaUser";
+$route['kelola-meja'] = "store/StorePage/kelolaMeja";
+$route['kelola-pemesanan'] = "store/StorePage/kelolaPesanMeja";
 
 //--- Admin Lokasi ---- ///
 $route['add-provinsi'] = "admin/AdminLokasi/addProvinsi";
@@ -99,6 +101,7 @@ $route['data-user'] = "admin/CafeAdmin/dataUser";
 $route['cari-cafe'] = "User/cariCafe/";
 $route['cafe/(:any)'] = "User/cafe/$1";
 $route['profile'] = "User/profile";
+$route['profile-like'] = "User/profileLike";
 $route['kunjungan'] = "User/baruDilihat";
 
 
@@ -113,8 +116,10 @@ $route['beranda-store'] = "store/StorePage/berandaStore";
 $route['store-kelola-menu'] = "store/StorePage/kelolaCafe";
 $route['kelola-foto']  = "store/StorePage/kelolaFoto";
 $route['kelola-media'] = "store/StorePage/kelolaMedia";
+$route['add-like-cafe'] = "store/StorePage/likeCafe";
 
 //---Store Action -- //
+$route['data-meja'] =  "store/StoreAction/dataMeja";
 $route['data-menu'] = "store/StoreAction/dataMenu";
 $route['delete-menu']  = "store/StoreAction/deleteMenu";
 $route['data-foto'] = "store/StoreAction/dataFoto";
@@ -123,3 +128,16 @@ $route['delete-video'] = "store/StoreAction/deleteVideo";
 $route['add-media'] = "store/StoreAction/addMedia";
 $route['data-media'] = "store/StoreAction/dataMedia";
 $route['delete-media'] = "store/StoreAction/deletemedia";
+$route['pdf'] = "admin/adminPdf/index";
+$route['pdfUser'] = "admin/adminPdf/userpdf";
+$route['pdfProvinsi'] = "admin/adminPdf/pdfProvinsi";
+$route['pdfKota'] = "admin/adminPdf/pdfKota";
+$route['pdfMeja'] = "admin/adminPdf/mejaPdf";
+$route['pdfPemesanan'] = "admin/adminPdf/pemesananPdf";
+$route['cafepdf']  = "admin/adminPdf/cafePdf";
+$route['menupdf'] = "admin/adminPdf/menuPdf";
+$route['mediapdf'] = "admin/adminPdf/mediaPdf";
+$route['add-meja'] = "store/StoreAction/addMeja";
+$route['pesan-meja'] = "store/StoreAction/pesanMeja";
+$route['pemesanan-selesai'] = "store/StoreAction/pemesananSelesai";
+

@@ -83,11 +83,17 @@
 								</div>
 
 							</div>
+							<?php
+									$user1 = ses_get("user");
+
+									$ulasan = crud_selwhere("ulasan",NULL,"username = '$user1'");
+
+								?>
 							<div class="col-md-3">
 								<div class="block-18 text-center">
 									<div class="text">
 										<div class="icon"><span class="icon-chat"></span></div>
-										<strong class="number" data-number="0">0</strong>
+										<strong class="number" data-number="<?=$ulasan['count']?>">0</strong>
 										<span>Ulasan</span>
 									</div>
 								</div>

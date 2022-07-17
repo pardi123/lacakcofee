@@ -7,7 +7,21 @@
 			<div class="card-body">
 				<div class="row">
 					 <div class="col-md-12">
-						 <button class="btn btn-primary" data-toggle="modal" data-target="#addMenu"><i class="material-icons">add</i> Tambah Menu</button>
+						 <div class="row">
+
+							 <div class="col-md-4">
+
+								 <button class="btn btn-primary" data-toggle="modal" data-target="#addMenu"><i class="material-icons">add</i> Tambah Menu</button>
+							 </div>
+							 <div class="col-md-4">
+								 <div class="form-group">
+									 <a href="<?=base_url()?>menupdf" target="_blank">
+
+										 <button class="btn btn-primary">Cetak Pdf</button>
+									 </a>
+								 </div>
+							 </div>
+						 </div>
 					 </div>
 					<div class="col-md-4">
 						<div class="form-group">
@@ -17,6 +31,7 @@
 							</select>
 						</div>
 					</div>
+
 					<div class="col-md-12">
 						<div class="table-responsive">
 							<table class="table table-striped table-hover">

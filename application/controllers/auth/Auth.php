@@ -51,6 +51,10 @@ class Auth extends CI_Controller
 			if ($addUser)
 			{
 				$addChangePas = crud_insert("auntetikasi","'','$username','$peliharaan'");
+				if ($addChangePas){
+					ses_set("user",$username);
+					echo "1";
+				}
 			}
 		}
 	}

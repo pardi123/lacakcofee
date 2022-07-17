@@ -9,7 +9,18 @@
 				<tr>
 					<td><?=$i?></td>
 					<td><?=$m->nama?></td>
-					<td>Minuman</td>
+					<?php
+						if ($jenis === "makanan"){
+							?>
+								<td>Makanan</td>
+							<?php
+						}
+						else {
+							?>
+								<td>Minuman</td>
+							<?php
+						}
+					?>
 					<td><?=$m->harga?></td>
 					<td>
 						<img src="<?=base_url()?>menu/<?=$m->cover?>" alt="" style="width: 100px; height: 100px; object-fit: cover">

@@ -12,6 +12,14 @@
 							<input type="text" value="*" class="form-control" name="cari" id="cari">
 						</div>
 					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+							<a href="<?=base_url()?>pdfUser">
+
+								<button class="btn btn-primary">Cetak Pdf</button>
+							</a>
+						</div>
+					</div>
 				</div>
 				<div class="table-responsive">
 					<table class="table table-hover table-striped">
@@ -37,6 +45,10 @@
 <script>
 	$(document).ready(function(){
 	    reloadUser();
+	
+		$("#cari").on('keyup',function(){
+			reloadUser();
+		})
 	    function reloadUser() {
 			let data = {"key":$("#cari").val()};
 			ajax.ajaxPost(
@@ -47,5 +59,6 @@
                 }
 			)
         }
+
 	})
 </script>

@@ -11,7 +11,7 @@
 					if (empty($user))
 					{
 						?>
-						<li class="nav-item active"><a href="<?=base_url()?>" class="nav-link">Home</a></li>
+						<li class="nav-item "><a href="<?=base_url()?>" class="nav-link">Home</a></li>
 						<li class="nav-item "><a href="javascript:void(0)" data-toggle="modal" data-target="#regist"  class="nav-link">Daftar</a></li>
 
 						<li class="nav-item"><a href="contact.html" class="nav-link" data-toggle="modal" data-target="#modal">Login</a></li>
@@ -30,8 +30,8 @@
 							<a class="nav-link dropdown-toggle" href="javascript:void(0)" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="icon-user"></span> Profile</a>
 							<div class="dropdown-menu" aria-labelledby="dropdown04">
 								<a href="<?=base_url()?>profile" class="dropdown-item">Profile</a>
-								<a class="dropdown-item" href="shop.html">Ulasan</a>
-								<a class="dropdown-item" href="product-single.html">Pengikut</a>
+								<a class="dropdown-item" href="<?=base_url()?>profile">Ulasan</a>
+								<a class="dropdown-item" href="<?=base_url()?>profile">Pengikut</a>
 								<a class="dropdown-toggle" href="<?=base_url()?>logout"><span class="icon-sign-out"></span> Logout</a>
 
 							</div>

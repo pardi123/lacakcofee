@@ -6,9 +6,19 @@
 			</div>
 			<div class="card-body">
 				<div class="row">
-					<div class="col-md-12">
+					<div class="col-md-4">
 						<button class="btn btn-primary" data-toggle="modal" data-target="#addCafe"><i class="material-icons">add</i> Tambah Cafe</button>
 					</div>
+
+					<div class="col-md-3">
+						<div class="form-group">
+							<a href="<?=base_url()?>cafepdf" target="_blank">
+
+								<button class="btn btn-primary">Cetak Pdf</button>
+							</a>
+						</div>
+					</div>
+				</div>
 					<div class="col-md-12">
 						<div class="row">
 
@@ -34,7 +44,6 @@
 									<option value="*">--- Pilih Kota/Kabupaten ---</option>
 								</select>
 							</div>
-						</div>
 					</div>
 					<div class="col-md-12">
 						<div class="table-responsive">
@@ -174,13 +183,22 @@
                             title:"Berhasil",
                             html:"berhasil Menambah Data"
                         });
+                        window.location = "<?=base_url()?>kelola-store";
                     }
                     else if (res === "2")
 					{
                         swal.fire({
                             icon:"error",
                             title:"Gagal",
-                            html:"Mohon Masukan Kota"
+                            html:"File Tidak Di izinkan"
+                        });
+                        window.location = "<?=base_url()?>kelola-store";
+					}
+                    else if(res === "3"){
+                        swal.fire({
+                            icon:"error",
+                            title:"Gagal",
+                            html:"Cafe Telah Ada"
                         });
 					}
                     else
@@ -188,7 +206,7 @@
                         swal.fire({
                             icon:"error",
                             title:"Gagal",
-                            html:"Terjadi Kesalahan"
+                            html:"File Tidak Di izinkan"
                         });
                     }
                 }

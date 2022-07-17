@@ -16,6 +16,12 @@ class StoreAction extends CI_Controller
 		$data['menu'] = crud_selwhere("$jenis",NULL,"cafe = '$store'");
 		$this->load->view("page/store/viewholder/data-menu",$data);
 	}
+
+	function dataMeja(){
+		$store = ses_get("store");
+		$data['meja']  =  crud_selwhere("store_meja",NULL,"cafe = '$store'");
+		$this->load->view("page/store/viewholder/data-meja",$data);
+	}
 	function deleteMenu()
 	{
 		$store = ses_get("store");
@@ -88,5 +94,56 @@ class StoreAction extends CI_Controller
 		{
 			echo "1";
 		}
+	}
+	function addMeja() {
+		$store = ses_get("store");
+		$kode =  securepost("kode",TRUE);
+		$nama = securepost("nama",TRUE);
+		$check = crud_selwhere("store_meja",NULL,"kode = '$kode' AND cafe = '$store'")['count'];
+		if ($check > 0){
+			echo "2";
+		}
+		else{
+			$addMeja = crud_insert("store_meja","'','$store','$kode','$nama','free'");
+			if ($addMeja){
+				echo "1";
+			}
+		}
+	}
+	function pesanMeja(){
+		$cafe = securepost("cafe",TRUE);
+		$kodeMeja = securepost("kodeMeja",TRUE);
+		$username = securepost("username",TRUE);
+		$phone = securepost("phone",TRUE);
+		$date = securepost("date",TRUE);
+		$noBoking = rand(1,9999);
+		$check = crud_selwhere("booking_meja",NULL,"cafe = '$cafe' AND kode = '$kodeMeja' AND tanggal_pemesanan  = '$date' AND status = 'dipesan'");
+		if ($check['count'] > 0) {
+			echo "2";
+		}
+		else {
+			$addBoking = crud_insert("booking_meja","'','$cafe','$kodeMeja','$username','$phone','$date','$noBoking','dipesan'");
+			if ($addBoking){
+				echo "1";
+			}
+		}
+
+	}
+	function pemesananSelesai(){
+		$id = securepost("id",TRUE);
+		$status = securepost("status",TRUE);
+		if ($status == "selesai"){
+			$pesananSelesai = crud_update("booking_meja","status = 'selesai'","id_data = '$id'");
+			if ($pesananSelesai){
+				echo "1";
+			}
+		}
+		elseif ($status == "batal"){
+			$pesananSelesai = crud_update("booking_meja","status = 'dibatalkan'","id_data = '$id'");
+			if ($pesananSelesai){
+				echo "1";
+			}
+		}
+
 	}
 }

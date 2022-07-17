@@ -104,6 +104,20 @@ class User extends MY_Controller {
 			redirect(base_url());
 		}
 	}
+	function profileLike()
+	{
+		$user  = ses_get("user");
+		if (!empty($user))
+		{
+			$data['user'] = $this->M_user->dataUSer();
+			$data['title'] = "Profile";
+			$this->renderLandingPage("page/content/profile_likeCafe",$data);
+		}
+		else
+		{
+			redirect(base_url());
+		}
+	}
 	function profilePerson()
 	{
 		$data['username'] = secureget("2",TRUE);

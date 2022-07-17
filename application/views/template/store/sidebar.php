@@ -34,6 +34,16 @@
 					<p>Kelola Media</p>
 				</a>
 			</li>
+			<li class="nav-item">
+				<a href="<?=base_url()?>kelola-meja" class="nav-link"><i class="material-icons">assignment</i>
+					<p>Kelola Meja</p>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="<?=base_url()?>kelola-pemesanan" class="nav-link"><i class="material-icons">assignment</i>
+					<p>Kelola Pemesanan Meja</p>
+				</a>
+			</li>
 
 		</ul>
 	</div>

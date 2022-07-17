@@ -18,6 +18,14 @@
 							<button class="btn btn-primary" data-toggle="modal" data-target="#addKota"><i  class="material-icons">add</i>Tambah Kota</button>
 						</div>
 					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+							<a href="<?=base_url()?>pdfKota" target="_blank">
+
+								<button class="btn btn-primary">Cetak Pdf</button>
+							</a>
+						</div>
+					</div>
 					<div class="col-md-12">
 						<div class="row">
 							<div class="col-md-4">

@@ -12,7 +12,14 @@
 							<button class="btn btn-primary"  data-toggle="modal" data-target="#addProvinsi"><i class="material-icons">add</i> Tambah Provinsi</button>
 						</div>
 					</div>
-					<div class="col-md-12">
+					<div class="col-md-4">
+						<div class="form-group">
+							<a href="<?=base_url()?>pdfProvinsi" target="_blank">
+
+								<button class="btn btn-primary">Cetak Pdf</button>
+							</a>
+						</div>
+					</div>					<div class="col-md-12">
 						<div class="table-responsive">
 							<table class="table table-hover table-striped">
 								<thead>

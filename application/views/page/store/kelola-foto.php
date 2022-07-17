@@ -53,7 +53,7 @@
 			</div>
 			<div class="modal-body">
 				<form class="addAva" enctype="multipart/form-data">
-					<label>Pilih Photo</label>
+					<label>Pilih Photo Atau Video (maximum file berukuran 10MB)</label>
 					<input type="hidden" name="kode" value="<?=$kode?>" required>
 					<input type="file" class="form-control-file" name="ava" required accept="image/jpeg, video/mp4">
 					<div class="form-group">
@@ -83,7 +83,7 @@
                         swal.fire({
                             icon:"success",
                             title:"Berhasil",
-                            html:"berhasil Menambah Photo"
+                            html:"berhasil Menambah Photo Atau Video"
                         });
                     }
                     else if (res === "2")
@@ -99,7 +99,7 @@
                         swal.fire({
                             icon:"error",
                             title:"Gagal",
-                            html:"Terjadi Kesalahan"
+                            html:"Format File Melebihi Batas Maximum"
                         });
                     }
                 }

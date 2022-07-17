@@ -6,8 +6,16 @@
 			</div>
 			<div class="card-body">
 				<div class="row">
-					<div class="col-md-12">
+					<div class="col-md-4">
 						<button class="btn btn-primary" data-toggle="modal" data-target="#addMedia"><i class="material-icons">add</i> Tambah Media</button>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+							<a href="<?=base_url()?>mediapdf" target="_blank">
+
+								<button class="btn btn-primary">Cetak Pdf</button>
+							</a>
+						</div>
 					</div>
 					<div class="col-md-12">
 						<div class="table-responsive">

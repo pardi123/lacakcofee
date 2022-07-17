@@ -33,6 +33,9 @@ class CafeAdmin extends CI_Controller
 				{
 					echo "1";
 				}
+				else{
+					echo  "3";
+				}
 			}
 		}
 		else
@@ -100,7 +103,7 @@ class CafeAdmin extends CI_Controller
 			$kode = $data['kode'];
 			$check  = crud_selwhere("cafe",NULL,"kode = '$kode'")['single'];
 
-			$check2  = crud_selwhere("cafe",NULL,"kode = '$kode'");
+			$check2  = crud_selwhere("video",NULL,"cafe = '$kode'");
 
 			if ($check2['count'])
 			{

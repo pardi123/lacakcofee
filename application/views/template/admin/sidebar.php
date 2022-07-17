@@ -35,9 +35,10 @@
 
 					<li class="nav-item">
 						<a href="<?=base_url()?>kelola-store" class="nav-link"><i class="material-icons">free_breakfast</i>
-							<p>Kelola Caffe</p>
+							<p>Kelola Cafe</p>
 						</a>
 					</li>
+
 
 
 		</ul>

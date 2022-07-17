@@ -22,7 +22,7 @@
 							?>
 							<div class="form-group">
 								<p class="font-weight-bold text-white">Pilih Provinsi</p>
-								<select name="lokasi" id="" class="form-control">
+								<select name="lokasi" id="" class="form-control" style="color: black !important; background-color: white !important;">
 									<?php
 									if ($provinsi['count'])
 									{
